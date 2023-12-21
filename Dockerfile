@@ -6,6 +6,6 @@ COPY . /api_ml_tflite
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["python", "server.py"]
