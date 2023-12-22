@@ -1,0 +1,17 @@
+runtime: custom
+env: flex
+
+manual_scaling:
+  instances: 1
+
+resources:
+  cpu: 8
+  memory_gb: 8
+  disk_size_gb: 10
+
+env_variables:
+  FLASK_APP: 'server:server'
+  FLASK_ENV: 'production'
+
+# Menjalankan Flask langsung tanpa Gunicorn
+entrypoint: python -m server
